@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nodi Space — Achieve Any Goal With AI-Generated Skill Trees</title>
+  <meta
+    name="description"
+    content="Transform your ambitions into interactive 2D constellations. Break down complex goals, track your progress, and master any skill step-by-step."
+  />
+  <meta name="theme-color" content="#120d4d" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Open+Sans:wght@700&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Фонове зоряне небо (малюється в js/main.js) -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <main class="hero">
+    <!-- ЛІВА КОЛОНКА: текст і кнопки -->
+    <section class="hero__content">
+      <img
+        class="logo reveal"
+        style="--i: 0"
+        src="assets/logo.svg"
+        alt="Nodi Space logo"
+        width="160"
+        height="160"
+      />
+      <p class="brand reveal" style="--i: 1">Nodi Space</p>
+
+      <span class="badge reveal" style="--i: 2">
+        <span aria-hidden="true">✨</span> Powered by AI
+      </span>
+
+      <h1 class="reveal" style="--i: 3">
+        Achieve Any Goal With <span class="nowrap">AI-Generated</span> Skill Trees
+      </h1>
+
+      <p class="lead reveal" style="--i: 4">
+        Transform your ambitions into interactive 2D constellations. Break down
+        complex goals, track your progress, and master any skill step-by-step.
+      </p>
+
+      <div class="downloads reveal" style="--i: 5">
+        <div class="stores">
+          <a class="store" href="#" aria-label="Download on the App Store">
+            <span class="store__inner">
+              <svg class="store__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M16.4 12.7c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9s-1.9-.9-3.2-.8c-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.200-1.200 3-2.400.9-1.300 1.300-2.700 1.300-2.700s-2.500-1-2.500-3.800zM14 5.600c.7-.8 1.100-1.900 1-3-1 0-2.100.7-2.800 1.500-.6.7-1.200 1.900-1 3 1.100.1 2.100-.6 2.800-1.500z"
+                />
+              </svg>
+              <span class="store__text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </span>
+          </a>
+
+          <a class="store" href="#" aria-label="Get it on Google Play">
+            <span class="store__inner">
+              <svg class="store__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#00d2ff" d="M3.6 2.4 13.2 12 3.6 21.6c-.3-.2-.5-.6-.5-1.1V3.5c0-.5.2-.9.5-1.1z" />
+                <path fill="#00f076" d="m16.4 8.8-3.200 3.200L3.600 2.400c.3-.2.8-.2 1.300.1l11.500 6.300z" />
+                <path fill="#ff3a44" d="M16.400 15.200 4.900 21.500c-.5.300-1 .300-1.300.100l9.600-9.600 3.200 3.200z" />
+                <path fill="#ffc400" d="m20.400 10.800-4 2.200-3.200-3.200 3.200-3.200 4 2.200c1 .6 1 1.400 0 2z" />
+              </svg>
+              <span class="store__text">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </span>
+          </a>
+        </div>
+
+        <div class="desktop">
+          <a class="btn-outline" href="#" data-platform="windows">Download for Windows</a>
+          <a class="btn-outline" href="#" data-platform="macos">Download for macOS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРАВА КОЛОНКА: прев'ю дерева навичок -->
+    <section class="hero__visual reveal" style="--i: 3" aria-label="Skill tree preview">
+      <div class="glass-card" aria-hidden="true"></div>
+
+      <div class="preview">
+        <canvas class="preview__stars" aria-hidden="true"></canvas>
+        <!-- SVG дерева генерується у js/main.js -->
+        <svg
+          id="skill-tree"
+          class="preview__tree"
+          viewBox="0 0 620 400"
+          role="group"
+          aria-label="Interactive skill tree. Click a star to unlock it."
+        ></svg>
+      </div>
+
+      <div class="streak-pill">
+        <span aria-hidden="true">🔥</span> Daily Streak
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

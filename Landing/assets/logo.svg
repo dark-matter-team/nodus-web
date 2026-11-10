@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4fd8ff" />
+      <stop offset="0.55" stop-color="#8f6bff" />
+      <stop offset="1" stop-color="#f04cff" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <!-- Маска, що робить літеру N "контурною" (подвійна лінія) -->
+    <mask id="outline" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+      <path d="M72 140V60l56 80V60" stroke="#fff" stroke-width="17" stroke-linejoin="miter" fill="none" />
+      <path d="M72 140V60l56 80V60" stroke="#000" stroke-width="9" stroke-linejoin="miter" fill="none" />
+    </mask>
+  </defs>
+
+  <!-- Орбіти -->
+  <g transform="translate(100 100)" stroke="url(#g)" stroke-width="1.4" opacity="0.85" filter="url(#glow)">
+    <ellipse rx="92" ry="34" transform="rotate(-38)" />
+    <ellipse rx="92" ry="34" transform="rotate(38)" />
+  </g>
+
+  <!-- Літера N -->
+  <g filter="url(#glow)">
+    <rect x="40" y="40" width="120" height="120" fill="url(#g)" mask="url(#outline)" />
+  </g>
+
+  <!-- Вузли на літері та орбітах -->
+  <g fill="#bfeaff">
+    <circle cx="72" cy="60" r="2.6" />
+    <circle cx="72" cy="140" r="2.6" />
+    <circle cx="128" cy="60" r="2.6" />
+    <circle cx="128" cy="140" r="2.6" />
+  </g>
+  <circle cx="176" cy="62" r="5" fill="#b24dff" filter="url(#glow)" />
+  <circle cx="24" cy="138" r="4" fill="#4fd8ff" filter="url(#glow)" />
+  <circle cx="150" cy="176" r="3" fill="#8f6bff" />
+  <circle cx="50" cy="24" r="2.4" fill="#f04cff" />
+</svg>
