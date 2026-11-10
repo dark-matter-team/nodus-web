@@ -57,6 +57,7 @@ export default function TreeViewer() {
         onNodeClick={handleNodeClick}
         nodesDraggable={false} 
         fitView
+        colorMode="dark"
       >
         <Background />
         <Controls />
